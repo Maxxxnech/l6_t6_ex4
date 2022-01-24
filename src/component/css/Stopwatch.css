@@ -1,0 +1,12 @@
+.stopWatchWrapper{
+    margin-top: 20px;
+    background-color: darkgray;
+    width: 50vh;
+    height: 50vh;
+}
+
+.dials{
+    margin-top: 15vh;
+    font-size: 10vh;
+    color: lightgreen;
+}

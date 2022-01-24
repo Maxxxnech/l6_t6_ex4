@@ -1,23 +1,18 @@
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
-
+import Stopwatch from './component/Stopwatch';
 function App() {
+  const [show, setShow] = useState(false);
+  function handleClick(){
+    setShow(!show);
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+       <header>
+       <h1>l6_t6 задание 4: секундомер</h1>
+       <button onClick={handleClick}>{show? "Убрать секундомер" : "Показать секундомер"}</button>
+       </header>
+       {show && <Stopwatch />}
     </div>
   );
 }
